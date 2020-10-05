@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.ztuo.bitrade</groupId>
+    <artifactId>dependency-installer</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>3.0.0-M1</version>
+                <executions>
+                    <execution>
+                        <id>install-spark-core</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>com.sparkframework</groupId>
+                            <artifactId>spark-core</artifactId>
+                            <version>2.6.0</version>
+                            <packaging>jar</packaging>
+                            <file>${project.basedir}/../jar/spark-core-2.6.0.jar</file>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>install-apns-http2-core</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>com.cdeer</groupId>
+                            <artifactId>apns-http2-core</artifactId>
+                            <version>1.3</version>
+                            <packaging>jar</packaging>
+                            <file>${project.basedir}/../jar/apns-http2-core-1.3.jar</file>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>install-aqmd-netty</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>com.aqmd</groupId>
+                            <artifactId>aqmd-netty</artifactId>
+                            <version>2.0.1</version>
+                            <packaging>jar</packaging>
+                            <file>${project.basedir}/../jar/aqmd-netty-2.0.1.jar</file>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>install-aqmd-netty-api</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>com.aqmd</groupId>
+                            <artifactId>aqmd-netty-api</artifactId>
+                            <version>2.0.1</version>
+                            <packaging>jar</packaging>
+                            <file>${project.basedir}/../jar/aqmd-netty-api-2.0.1.jar</file>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>install-aqmd-netty-core</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <groupId>com.aqmd</groupId>
+                            <artifactId>aqmd-netty-core</artifactId>
+                            <version>2.0.1</version>
+                            <packaging>jar</packaging>
+                            <file>${project.basedir}/../jar/aqmd-netty-core-2.0.1.jar</file>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+
+
+        </plugins>
+    </build>
+
+</project>
